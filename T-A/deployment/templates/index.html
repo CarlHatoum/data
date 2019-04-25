@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>T-Action Analytics</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="shortcut icon" href="/static/images/lstm.ico">
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>
+      <center>T-Action Analytics</center>
+    </h2>
+
+
+    {% block content %}
+
+    {% for message in form.ParCh.errors %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+
+    <form method=post>
+
+      {{ form.ParCh.label }}
+      {{ form.ParCh }}
+
+      <p></p>
+
+      {{ form.submit }}
+
+      <p></p>
+      <h4>
+        <center>T-Action Analytics allows you to process massive amount of data, and extract useful information.</center>
+      </h4>
+      
+      <h5>
+        Made by <a>Carl Hatoum</a> <br>
+      </h5>
+    </form>
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>
